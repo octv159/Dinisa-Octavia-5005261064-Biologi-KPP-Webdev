@@ -1,0 +1,788 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #faf8f5;
+  color: #0f172a;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* SEMBUNYIKAN CHECKBOX SAKLAR */
+.profile-toggle {
+  display: none;
+}
+
+/* NAVBAR BIRU ITS */
+header {
+  background-color: #013880;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid #000000;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-main {
+  font-size: 1.28rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.logo-main span {
+  color: #38bdf8;
+}
+
+.logo-sub {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #e0f2fe;
+}
+
+.logo-sub span {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+.nav-unlock-btn {
+  background-color: #ffffff;
+  color: #013880;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-unlock-btn:hover {
+  background-color: #4ade80;
+  color: #000000;
+  transform: translate(-1px, -1px);
+}
+
+/* Menu navigasi muncul setelah CV dibuka */
+.nav-links {
+  list-style: none;
+  display: none;
+  gap: 16px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: #0284c7;
+  color: #ffffff;
+  border-color: #000000;
+  box-shadow: 3px 3px 0px #000000;
+}
+
+/* LAPIS 1: HERO DENGAN LATAR SEA BLUE GRID & KARTU KREM */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 68px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0284c7;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+  background-size: 40px 40px;
+  padding: 60px 24px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* 5 DEKORASI BENTUK GEOMETRIS BERGERAK */
+.hero-glow {
+  position: absolute;
+  border: 3px solid #000000;
+  box-shadow: 5px 5px 0px #000000;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 1. Kotak Hijau (Kiri Atas) */
+.orb-1 {
+  width: 68px;
+  height: 68px;
+  background-color: #4ade80;
+  border-radius: 14px;
+  top: 38px;
+  left: 6%;
+  animation: floatA 4.5s ease-in-out infinite alternate;
+}
+
+/* 2. Lingkaran Pink (Kanan Bawah) */
+.orb-2 {
+  width: 76px;
+  height: 76px;
+  background-color: #f472b6;
+  border-radius: 50%;
+  bottom: 42px;
+  right: 7%;
+  animation: floatB 5s ease-in-out infinite alternate;
+}
+
+/* 3. Belah Ketupat / Kotak Miring Cyan Muda (Kanan Atas) */
+.orb-3 {
+  width: 56px;
+  height: 56px;
+  background-color: #67e8f9;
+  border-radius: 12px;
+  top: 52px;
+  right: 9%;
+  animation: floatSpin 6s ease-in-out infinite alternate;
+}
+
+/* 4. Kapsul Pink Muda / Coral (Kiri Bawah) */
+.orb-4 {
+  width: 82px;
+  height: 44px;
+  background-color: #f9a8d4;
+  border-radius: 999px;
+  bottom: 54px;
+  left: 8%;
+  animation: floatB 4.8s ease-in-out infinite alternate-reverse;
+}
+
+/* 5. Lingkaran Hijau Mint Kecil (Tengah Kiri) */
+.orb-5 {
+  width: 46px;
+  height: 46px;
+  background-color: #86efac;
+  border-radius: 50%;
+  top: 48%;
+  left: 3%;
+  animation: floatA 3.8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatA {
+  0% { transform: translate(0px, 0px) rotate(-10deg); }
+  100% { transform: translate(12px, -16px) rotate(8deg); }
+}
+
+@keyframes floatB {
+  0% { transform: translate(0px, 0px) scale(1); }
+  100% { transform: translate(-14px, -18px) scale(1.08); }
+}
+
+@keyframes floatSpin {
+  0% { transform: translateY(0px) rotate(15deg); }
+  100% { transform: translateY(-16px) rotate(45deg); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  background-color: #faf8f5;
+  color: #0f172a;
+  border: 3px solid #000000;
+  border-radius: 22px;
+  padding: 46px 36px;
+  box-shadow: 10px 10px 0px #000000;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: #013880;
+  color: #ffffff;
+  border: 2px solid #000000;
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.55rem;
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.hero-content h1 span {
+  color: #013880;
+  text-decoration: underline;
+  text-decoration-color: #0284c7;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px;
+}
+
+.hero-summary {
+  font-size: 1.05rem;
+  color: #334155;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+/* TOMBOL INTERAKTIF BIRU ITS */
+.btn-cta {
+  display: inline-block;
+  background-color: #013880;
+  color: #ffffff;
+  padding: 15px 34px;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 6px 6px 0px #000000;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  user-select: none;
+}
+
+.btn-cta:hover {
+  background-color: #0284c7;
+  color: #ffffff;
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.btn-cta:active {
+  transform: translate(4px, 4px);
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.label-open {
+  display: none;
+}
+
+/* LOGIKA PEMBUKA PROFIL (:checked) */
+.locked-sections {
+  display: none;
+}
+
+#buka-profil:checked ~ header .nav-unlock-btn {
+  display: none;
+}
+
+#buka-profil:checked ~ header .nav-links {
+  display: flex;
+}
+
+#buka-profil:checked ~ main .hero {
+  min-height: auto;
+  padding: 56px 24px;
+}
+
+#buka-profil:checked ~ main .btn-cta {
+  background-color: #ffffff;
+  color: #013880;
+}
+
+#buka-profil:checked ~ main .label-closed {
+  display: none;
+}
+
+#buka-profil:checked ~ main .label-open {
+  display: inline;
+}
+
+#buka-profil:checked ~ main .locked-sections {
+  display: block;
+  animation: popReveal 0.45s ease forwards;
+}
+
+@keyframes popReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* LAPIS 2, 3, 4: KARTU CV NEOBRUTALISM */
+.cv-section {
+  padding: 72px 0;
+  border-top: 3px solid #000000;
+  background-color: #faf8f5;
+}
+
+.bg-gradient-soft {
+  background-color: #e0f2fe;
+  background-image: radial-gradient(#7dd3fc 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-tag {
+  display: inline-block;
+  background-color: #013880;
+  color: #ffffff;
+  border: 2px solid #000000;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #000000;
+}
+
+.section-subtitle {
+  color: #334155;
+  font-weight: 500;
+  max-width: 650px;
+  margin: 8px auto 0 auto;
+}
+
+.cv-grid-2 {
+  display: flex;
+  gap: 28px;
+}
+
+.cv-grid-3 {
+  display: flex;
+  gap: 24px;
+}
+
+.cv-card {
+  background-color: #ffffff;
+  padding: 28px 26px;
+  border-radius: 16px;
+  flex: 1;
+  border: 3px solid #000000;
+  box-shadow: 7px 7px 0px #000000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cv-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0px #000000;
+}
+
+.card-blue { background-color: #ffffff; }
+.card-cyan { background-color: #ecfeff; }
+.card-indigo { background-color: #ffffff; }
+.card-sky { background-color: #f0f9ff; }
+
+.cv-card h3 {
+  color: #000000;
+  font-size: 1.32rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #000000;
+}
+
+/* TIMELINE TEGAS */
+.timeline-item {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 22px;
+  border-left: 3px solid #000000;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 4px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #0284c7;
+  border: 3px solid #000000;
+}
+
+.timeline-item h4 {
+  color: #000000;
+  font-size: 1.06rem;
+  font-weight: 800;
+  margin-bottom: 3px;
+}
+
+.cv-meta {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: #013880;
+  border: 1.5px solid #000000;
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.timeline-item p {
+  color: #334155;
+  font-size: 0.94rem;
+}
+
+/* SKILL TAGS POP */
+.skill-group {
+  margin-bottom: 22px;
+}
+
+.skill-group:last-child {
+  margin-bottom: 0;
+}
+
+.skill-group h4 {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tags span {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  padding: 6px 13px;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.skill-tags span:hover {
+  background-color: #013880;
+  color: #ffffff;
+  transform: translate(-2px, -2px);
+}
+
+.tag-indigo span:hover {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+
+/* PORTFOLIO 2 KOLOM INTERAKTIF (SEJAJAR DENGAN KARTU ATAS) */
+#portfolio.portfolio-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 24px 88px 24px;
+}
+
+/* HEADER PORTFOLIO (DISAMAKAN DENGAN BAGIAN EXPERIENCE) */
+#portfolio .portfolio-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+#portfolio .porto-pill-badge {
+  display: inline-block;
+  background-color: #013880;
+  color: #ffffff;
+  border: 2px solid #111111;
+  border-radius: 999px;
+  padding: 6px 18px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+#portfolio .section-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#portfolio .section-subtitle {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+#portfolio .portfolio-two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.porto-checkbox {
+  display: none;
+}
+
+#portfolio .porto-trigger {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  border: 3px solid #111111;
+  border-radius: 16px;
+  box-shadow: 6px 6px 0px #111111;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.porto-trigger:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #111111;
+}
+
+.porto-trigger:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #111111;
+}
+
+.trigger-webdev {
+  background-color: #bae6fd;
+}
+
+.trigger-admin {
+  background-color: #fde047;
+}
+
+.trigger-badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 800;
+  background-color: #111111;
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+.trigger-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111111;
+}
+
+.trigger-hint {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Laci Isi Portofolio (Tersembunyi sebelum diklik) */
+.porto-drawer {
+  display: none;
+  margin-top: 14px;
+  background-color: #fffdf7;
+  border: 3px solid #111111;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 5px 5px 0px #111111;
+}
+
+/* Munculkan laci saat kartu diklik */
+.porto-checkbox:checked ~ .porto-drawer {
+  display: block;
+  animation: popReveal 0.3s ease forwards;
+}
+
+@keyframes popReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.porto-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  background-color: #86efac;
+  color: #111111;
+  border: 2px solid #111111;
+  padding: 3px 9px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.porto-item h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 8px;
+}
+
+.porto-item p {
+  font-size: 0.9rem;
+  color: #334155;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.porto-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-porto {
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 800;
+  padding: 9px 14px;
+  border: 2px solid #111111;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0px #111111;
+  transition: transform 0.15s ease;
+}
+
+.btn-porto:hover {
+  transform: translate(-1px, -1px);
+}
+
+.btn-live {
+  background-color: #013880;
+  color: #ffffff;
+}
+
+.btn-repo {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+.btn-drive {
+  background-color: #f9a8d4;
+  color: #111111;
+}
+
+/* FOOTER */
+footer {
+  background-color: #000000;
+  color: #faf8f5;
+  text-align: center;
+  padding: 38px 24px;
+  border-top: 3px solid #000000;
+}
+
+.footer-brand {
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #38bdf8;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.social-links a {
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid #0284c7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.social-links a:hover {
+  background-color: #013880;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIF LAYAR HP */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero-content {
+    padding: 32px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.95rem;
+  }
+
+  .cv-grid-2, .cv-grid-3 {
+    flex-direction: column;
+  }
+    .cv-grid-2, .cv-grid-3 {
+    flex-direction: column;
+  }
+
+  .portfolio-two-col {
+    grid-template-columns: 1fr;
+  }
+}

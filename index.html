@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive CV &amp; Portofolio - Octa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SAKLAR INTERAKTIF PURE CSS (TANPA JAVASCRIPT) -->
+  <input type="checkbox" id="buka-profil" class="profile-toggle">
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <div class="logo-text">
+          <span class="logo-main">DINISA OCTAVIA</span></span>
+          <span class="logo-sub">Interactive CV &amp; <span>Portofolio</span></span>
+        </div>
+      </div>
+
+      <!-- Tombol cepat di navbar saat profil belum dibuka -->
+      <label for="buka-profil" class="nav-unlock-btn">Buka CV </label>
+
+      <!-- Menu navigasi lengkap (muncul otomatis setelah profil dibuka) -->
+      <ul class="nav-links">
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#edukasi">Edukasi &amp; Skill</a></li>
+        <li><a href="#pengalaman">Pengalaman</a></li>
+        <li><a href="#portofolio">Portofolio</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- LAPIS 1: HERO SECTION (SEA BLUE + 5 ELEMEN BERGERAK) -->
+    <section id="summary" class="hero">
+      <!-- 5 Bentuk Geometris Melayang & Bergerak -->
+      <div class="hero-glow orb-1"></div>
+      <div class="hero-glow orb-2"></div>
+      <div class="hero-glow orb-3"></div>
+      <div class="hero-glow orb-4"></div>
+      <div class="hero-glow orb-5"></div>
+
+      <div class="hero-content">
+        <span class="hero-badge"> 💻 Special Task Bayucaraka ITS</span>
+        <h1>Hi, I'm <span>Dinisa Octavia</span></h1>
+        <p class="hero-summary">
+          A detail-oriented and proactive incoming first-year student at Institut Teknologi Sepuluh Nopember (ITS) with a proven track record in financial management, treasury, and administrative governance through key leadership roles as Chief Treasurer and General Secretary of the Student Council. Demonstrated capability in managing organizational budgets, tracking financial cash flows, and maintaining high accountability. Adept at coordinating team operations, communicating efectively, and ensuring administrative precision. Eager to leverage strong financial acumen and leadership experience to contribute efectively to the research team's administrative and operational success
+        </p>
+
+        <!-- Tombol Interaktif Pembuka Profil -->
+        <label for="buka-profil" class="btn-cta">
+          <span class="label-closed">View My Profile ↓</span>
+          <span class="label-open">Hide Profile Details ↑</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- LAPIS 2 - 4: KONTEN CV YANG TERBUKA SETELAH KLIK -->
+    <div class="locked-sections">
+
+      <!-- LAPIS 2: EDUCATION & SKILLS -->
+      <section id="edukasi" class="cv-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Latar Belakang &amp; Kapabilitas</span>
+            <h2 class="section-title">Education &amp; Skills</h2>
+          </div>
+
+          <div class="cv-grid-2">
+            <!-- Kolom Education -->
+                        <div class="cv-card card-blue">
+              <h3>🎓 Education</h3>
+
+              <!-- ITEM 1 (Harus ditutup </div> sebelum item 2 dimulai) -->
+              <div class="timeline-item">
+                <h4>Undergraduate Biology — ITS</h4>
+                <span class="cv-meta">S1 Biology | 2026 – Sekarang</span>
+               </div>
+
+              <!-- ITEM 2 (Sejajar dengan item 1, bukan di dalamnya) -->
+              <div class="timeline-item">
+                <h4>Manbaul Ulum Islamic Senior High School</h4>
+                <span class="cv-meta">2023 – 2026</span>
+              </div>
+            </div>
+
+            <!-- Kolom Skills -->
+            <div class="cv-card card-cyan">
+              <h3>⚡ Skills</h3>
+
+              <div class="skill-group">
+                <h4>Web Development</h4>
+                <div class="skill-tags">
+                  <span>Semantic HTML5</span>
+                  <span>CSS Animations</span>
+                   <span>GitHub</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h4>Management &amp; Organization</h4>
+                <div class="skill-tags tag-indigo">
+                  <span>Project Workflow Coordination</span>
+                  <span>Team Collaboration</span>
+                  <span>Administrative Documentation</span>
+                  <span>Project Management</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h4>Mentorship, Communication &amp; Editorial</h4>
+                <div class="skill-tags">
+                  <span>Academic Coaching</span>
+                  <span>Content Structuring</span>
+                  <span>Youth Empowerment</span>
+                  <span>Public Mentoring</span>
+                  <span>Public Speaking &amp; PR</span>
+                  <span>Proofreading &amp; Copywriting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LAPIS 3: EXPERIENCE & HONORS / AWARDS -->
+      <section id="pengalaman" class="cv-section bg-gradient-soft">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Track Record &amp; Achievements</span>
+            <h2 class="section-title">Experience &amp; Honors / Awards</h2>
+          </div>
+
+          <div class="cv-grid-2">
+            <!-- Kolom Organization & Experience -->
+            <div class="cv-card card-indigo">
+              <h3>🤝 Organization &amp; Experience</h3>
+
+              <div class="timeline-item">
+                <h4>High School Academic Mentor</h4>
+                <span class="cv-meta">University.ID | 2026</span>
+                <p>Provided comprehensive academic mentoring for high school students, focusing on advanced concepts, critical reasoning, and academic proficiency.</p>
+              </div>
+
+              <div class="timeline-item">
+                <h4>General Secretary</h4>
+                <span class="cv-meta">PK OSIS Manbaul Ulum Islamic Senior High School | 2025–2026</span>
+                <p>Managed official organizational correspondence, archived administrative documents, and coordinated internal meetings.</p>
+              </div>
+
+              <div class="timeline-item">
+                <h4>Vice Head Project Manager</h4>
+                <span class="cv-meta">GEMILING | 2025</span>
+                <p>Responsible for project planning and execution, coordinating timelines to meet targets, and ensuring all activities proceed according to the established schedule.</p>
+              </div>
+
+              <div class="timeline-item">
+                <h4>Olympiad Coach (Junior High School)</h4>
+                <span class="cv-meta">AmbisCamp | 2025</span>
+                <p>Trained and mentored junior high school students for rigorous Math Olympiads, strengthening their core analytical thinking and problem-solving methodologies.</p>
+              </div>
+
+              <div class="timeline-item">
+                <h4>Staff of Interest and Talent Division</h4>
+                <span class="cv-meta">Gresik Children&rsquo;s Forum (Forum Anak Gresik) | 2024–2025</span>
+                <p>Managed programs to develop members&rsquo; interests and talents, organized activities fostering youth potential in Gresik Regency, and collaborated across divisions to host events.</p>
+              </div>
+
+              <div class="timeline-item">
+                <h4>General Treasurer</h4>
+                <span class="cv-meta">Student Council (OSIS) | 2024–2025</span>
+                <p>Managed organizational budgets, tracked cash flows, and maintained financial administrative archives to ensure smooth daily operations.</p>
+              </div>
+
+              <div class="timeline-item">
+                <h4>Public Relations Staff</h4>
+                <span class="cv-meta">East Java Anti-Bullying Ambassador | 2024</span>
+                <p>Cultivated strong, harmonious relationships among team members by fostering open communication, trust, and active engagement within the organization.</p>
+              </div>
+            </div>
+
+            <!-- Kolom Honors & Awards -->
+            <div class="cv-card card-sky">
+              <h3>🏆 Honors &amp; Awards</h3>
+
+              <div class="timeline-item">
+                <h4>2nd Place Winner, Pemilihan Pelajar Teladan Ke-46</h4>
+                <span class="cv-meta">LP Ma&rsquo;arif PCNU &amp; Dinas Pendidikan Kabupaten Gresik | 2026</span>
+                <p>Recognized among top exemplary students across Gresik Regency for academic excellence, leadership, and organizational contribution.</p>
+              </div>
+
+              <div class="timeline-item">
+                <h4>1st Place Winner, National Academic Competency Test Olympiad</h4>
+                <span class="cv-meta">Kompetisi Inovasi Ma&rsquo;arif – LP Ma&rsquo;arif NU PBNU | 2025</span>
+                <p>Achieved first place at the national level in academic competency testing and analytical problem-solving.</p>
+              </div>
+
+              <div class="timeline-item">
+                <h4>1st Place Winner, MITOS XIV Science Olympiad</h4>
+                <span class="cv-meta">LP Ma&rsquo;arif PCNU Kabupaten Gresik | 2024</span>
+                <p>Secured first place in the regency-level science olympiad competition.</p>
+              </div>
+
+              <div class="timeline-item">
+                <h4>2nd Place Winner, MIYC Regional Speech Competition</h4>
+                <span class="cv-meta">East Java Level | 2024</span>
+                <p>Awarded second place across East Java for persuasive public speaking and structured argument delivery, alongside various other academic and non-academic achievements.</p>
+               </div>
+               
+               <div class="timeline-item">
+                <h4>And various other achievements in both academic and non-academic fields.</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LAPIS 4: PORTOFOLIO LAINNYA -->
+      <!-- SECTION PORTFOLIO (2 KOLOM INTERAKTIF TANPA JAVASCRIPT) -->
+<section id="portfolio" class="portfolio-section">
+  <div class="portfolio-header">
+    <span class="porto-pill-badge">WORKS &amp; ARCHIVES</span>
+    <h2 class="section-title">Projects &amp; Portfolio</h2>
+    <p class="section-subtitle">Klik masing-masing kartu divisi di bawah untuk membuka detail karya dan dokumen.</p>
+  </div>
+
+  <div class="portfolio-two-col">
+    
+    <!-- KOLOM 1: WEB DEVELOPMENT -->
+    <div class="porto-column">
+      <input type="checkbox" id="toggle-webdev" class="porto-checkbox">
+      <label for="toggle-webdev" class="porto-trigger trigger-webdev">
+        <span class="trigger-badge">💻 Web Development portfolio</span>
+        <span class="trigger-hint">Klik untuk membuka portofolio ▾</span>
+      </label>
+
+      <div class="porto-drawer">
+        <article class="porto-item">
+          <div class="porto-tag">HTML5 &amp; CSS3 // CYBER-AEROSPACE HUD</div>
+          <h3>Bayucaraka ITS — UAV Team Profile</h3>
+          <p>
+            Landing page profil tim riset pesawat tanpa awak (UAV) Bayucaraka ITS
+          </p>
+          <div class="porto-links">
+            <!-- Sesuaikan URL di bawah jika nama repository GitHub-mu sudah diubah -->
+            <a href="https://octv159.github.io/Portofolio-WebDev/" target="_blank" class="btn-porto btn-live">🌐 Live Website</a>
+            <a href="https://github.com/octv159/Portofolio-WebDev" target="_blank" class="btn-porto btn-repo">📂 GitHub Repo</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- KOLOM 2: ADMINISTRATION -->
+    <div class="porto-column">
+      <input type="checkbox" id="toggle-admin" class="porto-checkbox">
+      <label for="toggle-admin" class="porto-trigger trigger-admin">
+        <span class="trigger-badge">📋 Administration portfolio</span>
+        <span class="trigger-hint">Klik untuk membuka arsip ▾</span>
+      </label>
+
+      <div class="porto-drawer">
+        <article class="porto-item">
+          <div class="porto-tag">KPP & RAB Innovation Project</div>
+          <p>
+          </p>
+          <div class="porto-links">
+            <!-- Ganti tanda # dengan link folder Google Drive portofolio administrasimu -->
+            <a href="https://drive.google.com/drive/folders/1CBw3y4pQjYJ42FAU6iMYOj9bhI6oxWnl" target="_blank" class="btn-porto btn-drive">📁 Lihat Portofolio Drive</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+      <!-- FOOTER -->
+      <footer id="kontak">
+        <div class="container">
+          <p class="footer-brand"> Dinisa Octavia — Special Task Webdev Bayucaraka ITS 2027</p>
+          <div class="social-links">
+            <a href="#">Instagram: sa.octviaa_</a>
+            <a href="#">Email: odini671@gmail.com</a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+</body>
+</html>
